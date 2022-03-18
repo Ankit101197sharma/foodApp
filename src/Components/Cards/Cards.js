@@ -1,5 +1,5 @@
 import React from 'react'
-import {cardDetails} from "../../DataFile"
+import {cardDetails, aboutData} from "../../DataFile"
 import classes from "./Cards.module.css"
 
  function Cards() {
@@ -16,32 +16,37 @@ import classes from "./Cards.module.css"
            <h3 className={classes.heading} >{item.imgHeading}</h3>
            <p className={classes.text}>{item.imgDesc}</p>
               </div>
-
          </div>
-         
-            </div>  
-            
+         </div>   
           )
-         
         })}
-       
+  {/* about section */}
         
         <div style={{padding:'40px'}}>
-          <h3 className={classes.heading}>About Me, The Food Man</h3>
-          <img src="https://www.w3schools.com/w3images/chef.jpg" alt="chief" />
-          <div style={{paddingTop:"32px", paddingBottom:"32px"}}>
+          {aboutData.map((value)=>{
+            return(
+              <>
+              <h3 className={classes.heading}>{value.mainHeading}</h3>
+              <img src={value.imageSrc} alt="" />
+              <div style={{paddingTop:"32px", paddingBottom:"32px"}}>
             <h4>
-              <b>I am Who I Am !</b>
+              <b>{value.h4Heading}</b>
             </h4>
             <h6>
-              <i>With Passion For Real, Good Food</i>
+              <i>{value.h6Heading}</i>
             </h6>
-            <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p>{value.imagePara}</p>
           </div>
+              </>
+            )
+          })}
               <hr />
         </div>
-        <div>
-          <footer className='row' style={{paddingBottom:'20px'}}>
+
+          {/* Footer section */}
+
+        <div style={{padding:'26px', margin:'26px'}}>
+          <footer className={classes.row1} style={{paddingBottom:'20px'}}>
                   <div style={{textAlign:'left'}} className={classes.third}>
                     <h3>FOOTER</h3>
                     <p >Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
@@ -61,7 +66,7 @@ import classes from "./Cards.module.css"
                         </li>
                     </ul>
                   </div>
-                  <div className={classes.third}>
+                  <div style={{textAlign:'left'}} className={classes.third}>
                     <h3>POPULAR TAGS</h3>
                     <p>
                       <span className={classes.tags}>
@@ -110,12 +115,6 @@ import classes from "./Cards.module.css"
         </div>
       </div>
     </div>
-    
-
-
-
-
-   
 </>
   )
 }

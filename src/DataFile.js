@@ -47,7 +47,19 @@ export const cardDetails = [
         imgHeading:'Le French',
         imgDesc:'Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.'
     },
+   
+   
 
 
+]
+export const aboutData=[
 
+    {
+        mainHeading:"About Me, The Food Man",
+        imageSrc:'https://www.w3schools.com/w3images/chef.jpg',
+        h4Heading:'I am Who I Am !',
+        h6Heading:'With Passion For Real, Good Food',
+        imagePara:'Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.'
+    },
+    
 ]
